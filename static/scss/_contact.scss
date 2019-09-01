@@ -1,0 +1,86 @@
+/*=================== contact banner start ====================*/
+
+.contact-info{
+	margin-bottom: 12px;
+  
+	&__icon{
+	  margin-right: 20px;
+  
+	  i,span{
+		color: #8f9195;
+		font-size: 27px;
+	  }
+	}
+  
+	.media-body{
+  
+	  h3{
+		font-size: 16px;
+		margin-bottom: 0;
+  
+		a{
+		  color: $title-color;
+		}
+	  }
+  
+	  p{
+		color: #999999;
+	  }
+	}
+  }
+  /*=================== contact banner end ====================*/
+  
+  
+  /*=================== contact form start ====================*/
+  .contact-title{
+	font-size: 27px;
+	font-weight: 600;
+	margin-bottom: 20px;
+  }
+  
+  .form-contact{
+  
+	label{
+	  color: $primary-color;
+	  font-size: 14px;
+	}
+  
+	.form-group{
+	  margin-bottom: 15px;
+  
+	  @media(min-width: 1000px){
+		margin-bottom: 30px;
+	  }
+	}
+  
+	.form-control{
+	  border: 1px solid #f0e9ff;
+	  border-radius: 5px;
+	  height: 48px;
+	  padding-left: 18px;
+	  font-size: 13px;
+	  background: transparent;
+  
+	  &:focus{
+		outline: 0;
+		box-shadow: none;
+	  }
+  
+	  &::placeholder{
+		font-weight: 300;
+		color: #999999;
+	  }
+	}
+  
+	textarea{
+	  border-radius: 12px;
+	  height: 100% !important;
+	}
+  
+	// button{
+	//   border: 0;
+	// }
+  }
+  
+  /*=================== contact form end ====================*/
+  

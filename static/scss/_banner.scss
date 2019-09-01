@@ -1,0 +1,158 @@
+/* Home Banner Area css
+============================================================================================ */
+
+.home_banner_area {
+    background: url(../img/banner/home-banner.png) no-repeat top center;
+    background-position: center;
+    background-size: cover;
+    min-height: 890px;
+    @media (max-width: 991px) {
+        min-height: 750px;
+    }
+    @media (max-width: 767px) {
+        background: #ffffff;
+    }
+    .banner_inner {
+        width: 100%;
+        min-height: 890px;
+        @media (max-width: 991px) {
+            min-height: 750px;
+        }
+        .home_right_img {
+            padding-top: 197px;
+            @media (max-width: 991px) {
+                display: none;
+            }
+        }
+    }
+    .banner_content {
+        text-align: left;
+        @media (max-width: 991px) {
+            margin-top: 150px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            color: $text-color;
+        }
+        h1 {
+            margin-top: 20px;
+            font-size: 60px;
+            font-weight: 500;
+            line-height: 60px;
+			margin-bottom: 20px;
+			@media (max-width: 767px) {
+				font-size: 35px;
+				line-height: 42px;
+			}
+        }
+        h5 {
+            font-size: 24px;
+            font-weight: 300;
+			margin-bottom: 0px;
+			@media (max-width: 767px) {
+				line-height: 36px;
+			}
+        }
+        .social_icons {
+            a {
+                color: rgba($title-color, .50);
+                font-size: 20px;
+                display: inline-block;
+                margin-right: 16px;
+                cursor: pointer;
+                @include transition();
+                &:hover {
+                    @extend .gradient-color;
+                }
+            }
+        }
+        .primary_btn {
+            margin-right: 20px;
+        }
+    }
+}
+
+.banner_area {
+    position: relative;
+    z-index: 1;
+    // min-height: 485px;
+    @media (max-width: 1199px) {
+        min-height: 350px;
+    }
+    .banner_inner {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        min-height: 450px;
+        background: url(../img/banner/common-banner.png) no-repeat right bottom;
+        // background-size: 90% 85%;
+        // width: 98%;
+        background-size: cover;
+        z-index: 1;
+        @media (max-width: 1199px) {
+            min-height: 350px;
+        }
+        // @media (max-width: 991px) {
+        //     background: $primary-color2;
+        //     width: 100%;
+        // }
+        .banner_content {
+            margin-left: 50px;
+            margin-top: 40px;
+            @media (max-width: 991px) {
+                margin-left: 0px;
+                // margin-top: 50px;
+            }
+            h2 {
+                color: #fff;
+                font-size: 45px;
+                font-family: $primary-font;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+                font-weight: 700;
+                @media (max-width: 991px) {
+                    font-size: 30px;
+                }
+            }
+            .page_link {
+                a {
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    color: #fff;
+                    font-family: $primary-font;
+                    padding-left: 20px;
+                    padding-right: 8px;
+                    position: relative;
+                    &:before {
+                        font-family: 'themify';
+                        speak: none;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-variant: normal;
+                        text-transform: none;
+                        line-height: 1;
+                        -webkit-font-smoothing: antialiased;
+                        content: "\e649";
+                        position: absolute;
+                        right: -14px;
+                        top: 50%;
+                        @include transform(translateY(-50%));
+                    }
+                    &:last-child {
+                        margin-right: 0px;
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* End Home Banner Area css
+============================================================================================ */

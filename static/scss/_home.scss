@@ -1,0 +1,500 @@
+/* Start Statistics Area css
+============================================================================================ */
+
+.statistics_area {
+    position: relative;
+    margin-top: -121px;
+    @media (max-width: 991px) {
+        margin-top: 0px;
+    }
+}
+
+.statistics_item {
+    background: $offwhite;
+    text-align: center;
+	padding: 30px 15px;
+	@media (max-width: 767px) {
+        margin-bottom: 20px;
+    }
+    h3 {
+        font-size: 27px;
+        margin-bottom: 5px;
+        @extend .gradient-color;
+    }
+    p {
+        margin-bottom: 0px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+/* End Statistics Area css
+============================================================================================ */
+
+/* Start About Us Area css
+============================================================================================ */
+
+.about_area {
+    position: relative;
+    .main_title {
+        margin-bottom: 0px;
+    }
+    h2 {
+		margin-bottom: 30px;
+		@media (max-width: 991px) {
+			margin-bottom: 20px;
+		}
+    }
+    .primary_btn {
+		margin-top: 40px; 
+		@media (max-width: 991px) {
+			margin-top: 20px;
+		}
+    }
+    .about_img {
+        position: relative;
+        right: 220px;
+        @media (max-width: 1480px) {
+            right: 0;
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        @media (max-width: 991px) {
+            display: none;
+        }
+    }
+}
+
+/* End About Us Area css
+============================================================================================ */
+
+/* Start Service Area css
+============================================================================================ */
+
+.services_area {
+    padding-bottom: 110px;
+    @media (max-width: 1199px) {
+        padding-bottom: 50px;
+    }
+}
+
+.service_item {
+    padding: 60px 30px;
+    text-align: center;
+    background: $offwhite;
+    // margin-bottom: 30px;
+    @include transition();
+    img {
+        margin-bottom: 45px;
+    }
+    h4 {
+        color: $title-color;
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+        @include transition();
+    }
+    p {
+        margin-bottom: 0px;
+        @include transition();
+    }
+    &:hover {
+        background: #5f30ff;
+        h4,
+        p,
+        .primary_btn2 {
+            color: #ffffff;
+        }
+        .primary_btn2 {
+            &:before {
+                background: #ffffff;
+            }
+        }
+    }
+}
+
+/* End Service Area css
+============================================================================================ */
+
+/* Start Portfolio Area css
+============================================================================================ */
+
+.portfolio_area {
+    padding-bottom: 110px;
+    @media (max-width: 991px) {
+        padding-bottom: 50px;
+    }
+    .filters {
+        ul {
+            padding-left: 0;
+            margin-bottom: 30px;
+            @media (max-width: 991px) {
+                margin-bottom: 20px;
+            }
+            li {
+                display: inline-block;
+                margin-right: 40px;
+                font-size: 13px;
+                font-weight: 400;
+                text-transform: uppercase;
+                color: $title-color;
+                cursor: pointer;
+                @include transition();
+                &:hover,
+                &.active {
+                    color: $primary-color;
+                }
+                @media (max-width: 767px) {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}
+
+.single_portfolio {
+    position: relative;
+    margin-bottom: 30px;
+    @media (max-width: 767px) {
+        margin-bottom: 35px;
+    }
+    .overlay {
+        @include transition();
+    }
+    .short_info {
+        position: absolute;
+        bottom: 44px;
+        left: 80px;
+        color: #ffffff;
+        opacity: 0;
+        visibility: hidden;
+        @include transition();
+        h4 {
+            text-transform: capitalize;
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            a {
+                color: #ffffff;
+            }
+        }
+        p {
+            margin-bottom: 0px;
+        }
+    }
+    &:hover {
+        .overlay {
+            top: 20px;
+            left: 20px;
+            background: rgba($primary-color, 0.9);
+        }
+        .short_info {
+            bottom: 24px;
+            left: 60px;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.portfolio_details_area {}
+
+.portfolio_details_inner {
+    .row {
+        margin-bottom: 35px;
+        @media (max-width: 480px) {
+            margin-bottom: 30px;
+        }
+    }
+    p {
+        margin-bottom: 30px;
+        font-size: 14px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+    .portfolio_right_text {
+        padding: 30px;
+        background: #f8faff;
+        margin-top: 10px;
+        h4 {
+            font-size: 20px;
+            text-transform: capitalize !important;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+        .list {
+            li {
+                margin-bottom: 7px;
+                span {
+                    font-family: $primary-font;
+                    color: #000000;
+                    font-size: 16px;
+                    font-weight: 500;
+                    width: 97px;
+                    display: inline-block;
+                }
+                font-weight: normal;
+                font-size: 14px;
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+                i {
+                    color: #f1cd09;
+                }
+            }
+        }
+    }
+}
+
+/* End Portfolio Area css
+============================================================================================ */
+
+/* Start Blog Area css
+============================================================================================ */
+
+.blog-area {
+    padding-bottom: 110px;
+    @media (max-width: 991px) {
+        padding-bottom: 50px;
+    }
+}
+
+.single-blog {
+    margin-bottom: 30px;
+    @include transition();
+    p {
+        margin-bottom: 0px;
+    }
+    .thumb {
+        overflow: hidden;
+        img {
+            width: 100%;
+            @include transition();
+        }
+    }
+    .short_details {
+        background: $offwhite;
+        padding: 32px 30px 37px;
+        @include transition();
+    }
+    .meta-top {
+        a {
+            display: inline-block;
+            color: $text-color;
+            margin-right: 30px;
+            @include transition();
+            i {
+                margin-right: 10px;
+            }
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+    h4 {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        @include transition();
+        @media(max-width: 991px) {
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+        a {
+            color: $title-color;
+        }
+    }
+    .text-wrap {
+        margin-bottom: 22px;
+        p {
+            font-size: 15px;
+        }
+    }
+    .primary_btn2 {
+        &:hover {
+            color: $primary-color2;
+        }
+    }
+    &:hover {
+        box-shadow: 0px 10px 20px rgba($title-color, 0.1);
+        .short_details {
+            background: #ffffff;
+        }
+        img {
+            transform: scale(1.1);
+        }
+    }
+}
+
+/* End Blog Area css
+============================================================================================ */
+
+/* Start Brands Area css
+============================================================================================ */
+
+.brands-area {}
+
+.single-brand-item {
+    margin: 0 auto;
+    img {
+        cursor: pointer;
+        @include transition();
+    }
+}
+
+/* End Brands Area css
+============================================================================================ */
+
+
+
+
+/* Start Testimonial Area css
+============================================================================================ */
+.testimonial_area{
+    padding-bottom: 100px;
+
+    @media(min-width: 600px){
+        padding-bottom: 180px;
+    }
+
+    @media(min-width: 1200px){
+        padding-bottom: 390px;
+    }
+}
+.testimonial-slider{
+    position: relative;
+    z-index: 1;
+
+    &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -130px;
+        width: 665px;
+        height: 550px;
+        transform: scale(.8);
+        background: url(../img/testimonials/testimonial-bg.png) left center no-repeat;
+        background-size: cover;
+        z-index: -1;
+        display: none;
+
+        @media(min-width: 992px){
+            display: block;
+        }
+
+        @media(min-width: 1200px){
+            width: 665px;
+            height: 550px;
+            transform: scale(1);
+        }
+    }
+
+    .testimonial-item{
+        margin-top: 30px;
+
+        @media(min-width: 992px){
+            margin-top: 150px;
+        }
+    }
+
+    
+    .owl-item img{
+        width: 200px;
+        height: 225px;
+        margin-right: auto;
+        margin-left: auto;
+        border-radius: 0 40px 0 40px;
+        box-shadow: -1px 7px 20px 0px rgba(5, 54, 77, 0.2); 
+    }
+
+    
+
+    .testi-img{
+       
+        img{
+            // position: absolute;
+            // top: 50%;
+            // left: 50%;
+        }
+    }
+
+    h4{
+        font-size: 20px;
+        margin-bottom: 4px;
+    }
+
+    small{
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    p{
+        color: #5b6d75;
+    }
+
+
+    .owl-dots{
+        position: absolute;
+        left: 50%;
+        padding-top: 20px;
+        transform: translateX(-50%);
+
+        @media(min-width: 992px){
+            // padding-top: 0;
+            left: 70%;
+        }
+
+        .owl-dot{
+
+            span{
+                background: rgb(200, 207, 218);
+            }
+
+            &.active span{
+                background: #5f30ff;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+.star_rating{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li{
+        display: inline-block;
+        margin-right: 6px;
+
+        &:last-child{
+            margin-right: 0;
+        }
+
+        i,span{
+            color: #ffd804;
+            font-size: 15px;
+        }
+
+        &.disable{
+
+            i,span{
+                color: #aeb9be;
+            }
+        }
+    }
+}
+
+

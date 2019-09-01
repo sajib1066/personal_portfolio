@@ -1,0 +1,140 @@
+.section_gap {
+    padding: 140px 0;
+    @media (max-width: 1199px) {
+        padding: 80px 0;
+    }
+}
+
+.section_gap_top {
+    padding-top: 140px;
+    @media (max-width: 1199px) {
+        padding-top: 80px;
+    }
+}
+
+.section_gap_bottom {
+    padding-bottom: 140px;
+    @media (max-width: 1199px) {
+        padding-bottom: 80px;
+    }
+}
+
+/* Main Title Area css
+============================================================================================ */
+
+.main_title {
+    margin-bottom: 80px;
+    @media (max-width: 1199px) {
+        margin-bottom: 40px;
+    }
+    p.top_text {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 500;
+        position: relative;
+        margin-bottom: 10px;
+        span {
+            position: relative;
+            top: -2px;
+            display: inline-block;
+            margin-left: 5px;
+            width: 80px;
+            height: 4px;
+            background: rgba($primary-color2, .6);
+            @include filter(blur(4px));
+            border-radius: 5px;
+        }
+    }
+    h2 {
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 0px;
+        line-height: 52px;
+        text-transform: capitalize;
+        @media (max-width: 767px) {
+            font-size: 30px;
+            line-height: 34px;
+        }
+        br {
+            @media (max-width: 991px) {
+                display: none;
+            }
+        }
+    }
+}
+
+/* End Main Title Area css
+============================================================================================ */
+
+/* Start Gradient Area css
+============================================================================================ */
+
+.gradient-bg {
+    @include gradient(90deg, $primary-color 0%, $primary-color2 100%);
+}
+
+.border-gradient {
+    @include border-gradient(90deg, $primary-color 0%, $primary-color2 100%);
+}
+
+.gradient-bg2 {
+    @include gradient(90deg, $primary-color 0%, $primary-color2 100%);
+}
+
+.gradient-color {
+    @include gradient(90deg, $primary-color 0%, $primary-color2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* End Gradient Area css
+============================================================================================ */
+
+.primary_btn {
+    display: inline-block;
+    background: linear-gradient(to right, $primary-color 0%, $primary-color2 51%, $primary-color 100%);
+    color: #fff;
+    letter-spacing: 0px;
+    font-family: $primary-font;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 50px;
+    padding: 0 38px;
+    outline: none !important;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-size: 200% auto;
+    &:hover {
+        background-position: right center;
+        color: #fff;
+    }
+}
+.primary_btn2 {
+	font-size: 13px;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: $title-color;
+	display: inline-block;
+	position: relative;
+	@include transition();
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0px;
+		bottom: -2px;
+		width: 50px;
+		height: 2px;
+		@extend .gradient-bg;
+		@include transition();
+	}
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
