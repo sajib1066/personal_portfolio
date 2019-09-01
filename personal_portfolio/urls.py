@@ -23,5 +23,6 @@ urlpatterns = [
     path('', views.home_page, name='home'),
     path('about', views.about_page, name='about'),
     path('services', views.service_page, name='service'),
+    path('contact', views.contact_page, name='contact'),
     path('portfolio/', include('portfolio.urls'))
 ]

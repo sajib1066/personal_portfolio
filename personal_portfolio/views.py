@@ -8,3 +8,6 @@ def about_page(request):
 
 def service_page(request):
     return render(request, 'services.html')
+
+def contact_page(request):
+    return render(request, 'contact.html')
