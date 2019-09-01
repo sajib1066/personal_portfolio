@@ -3,3 +3,6 @@ from django.shortcuts import render
 
 def portfolio_page(request):
     return render(request, 'portfolio/portfolio.html')
+
+def portfolio_details(request):
+    return render(request, 'portfolio/portfolio-details.html')
