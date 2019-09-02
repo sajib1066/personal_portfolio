@@ -37,7 +37,7 @@
                         </div>
 
                         <div class="blog_details">
-                            <a class="d-inline-block" href="{% url 'blog-details' %}">
+                            <a class="d-inline-block" href="{% url 'blog-details' post.id %}">
                                 <h2>{{ post.title }}</h2>
                             </a>
                             <p>{{ post.content|safe }}</p>
