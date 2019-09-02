@@ -9,5 +9,9 @@ def blog_page(request):
     }
     return render(request, 'blog/blog.html', context)
 
-def blog_details(request):
-    return render(request, 'blog/single-blog.html')
+def blog_details(request, post_id):
+    post = Post.objects.get(id=post_id)
+    context = {
+        'post': post
+    }
+    return render(request, 'blog/single-blog.html', context)
