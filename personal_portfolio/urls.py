@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.staticfiles.urls import static, staticfiles_urlpatterns
 
 from . import views
+from . import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,5 +27,9 @@ urlpatterns = [
     path('services', views.service_page, name='service'),
     path('contact', views.contact_page, name='contact'),
     path('portfolio/', include('portfolio.urls')),
-    path('blog/', include('blog.urls'))
+    path('blog/', include('blog.urls')),
+    path('ckeditor/', include('ckeditor_uploader.urls'))
 ]
+
+urlpatterns += staticfiles_urlpatterns()
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
