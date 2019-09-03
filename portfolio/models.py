@@ -10,6 +10,7 @@ class Category(models.Model):
 
 class Portfolio(models.Model):
     title = models.CharField(max_length=120)
+    portfolio_type = models.CharField(max_length=45)
     photo = models.ImageField(upload_to='portfolio/')
     description = RichTextUploadingField()
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
