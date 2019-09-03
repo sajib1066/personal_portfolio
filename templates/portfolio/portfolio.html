@@ -52,7 +52,7 @@
 							<img class="img-fluid w-100" src="{{ portfolio.photo.url }}" alt="">
 							<div class="overlay"></div>
 							<div class="short_info">
-								<h4><a href="{% url 'portfolio-details' %}">{{ portfolio.title }}</a></h4>
+								<h4><a href="{% url 'portfolio-details' portfolio.id %}">{{ portfolio.title }}</a></h4>
 								<p>{{ portfolio.portfolio_type }}</p>
 							</div>
 						</div>
