@@ -9,5 +9,9 @@ def portfolio_page(request):
     }
     return render(request, 'portfolio/portfolio.html', context)
 
-def portfolio_details(request):
-    return render(request, 'portfolio/portfolio-details.html')
+def portfolio_details(request, portfolio_id):
+    item = Portfolio.objects.get(id=portfolio_id)
+    context = {
+        'item': item
+    }
+    return render(request, 'portfolio/portfolio-details.html', context)
