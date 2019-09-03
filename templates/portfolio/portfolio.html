@@ -45,7 +45,7 @@
 			<div class="filters-content">
 				<div class="row portfolio-grid">
 					<div class="grid-sizer col-md-3 col-lg-3"></div>
-					<div class="col-lg-6 col-md-6 all following">
+					<!-- <div class="col-lg-6 col-md-6 all following">
 						<div class="single_portfolio">
 							<img class="img-fluid w-100" src="{% static 'img/portfolio/p1.jpg' %}" alt="">
 							<div class="overlay"></div>
@@ -106,10 +106,23 @@
 							<div class="overlay"></div>
 							<div class="short_info">
 								<h4><a href="{% url 'portfolio-details' %}">Lens Mockup Design</a></h4>
-								<p>Art, Illustration</p>
+								<p>Art, Illustration test</p>
+							</div>
+						</div>
+					</div> -->
+
+          {% for portfolio in portfolio %}
+          <div class="col-lg-6 col-md-6 all {{ portfolio.category }}">
+						<div class="single_portfolio">
+							<img class="img-fluid w-100" src="{{ portfolio.photo.url }}" alt="">
+							<div class="overlay"></div>
+							<div class="short_info">
+								<h4><a href="{% url 'portfolio-details' %}">Lens Mockup Design</a></h4>
+								<p>{{ portfolio.title }}</p>
 							</div>
 						</div>
 					</div>
+          {% endfor %}
 
 				</div>
 			</div>
