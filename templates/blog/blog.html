@@ -25,8 +25,8 @@
           <div class="row">
               <div class="col-lg-8 mb-5 mb-lg-0">
                   <div class="blog_left_sidebar">
+                    {% if posts %}
                     {% for post in posts %}
-                    {% if post %}
                       <article class="blog_item">
                         <div class="blog_item_img">
                           <img class="card-img rounded-0" src="{{ post.photo.url }}" alt="">
@@ -47,10 +47,11 @@
                             </ul>
                         </div>
                       </article>
-                      {% else %}
-                        <h2>No Post Available.</h2>
-                      {% endif %}
-                      {% endfor %}
+
+                    {% endfor %}
+                    {% else %}
+                      <h2 class="text-danger">No Post Available.</h2>
+                    {% endif %}
 
 
 
