@@ -1,0 +1,12 @@
+<h3 class="widget_title">Recent Post</h3>
+{% for r_post in r_post %}
+<div class="media post_item">
+    <img src="{{ r_post.photo.url }}" alt="post" height="80" width="80">
+    <div class="media-body">
+        <a href="{% url 'blog-details' r_post.id %}">
+            <h3>{{ r_post.title }}</h3>
+        </a>
+        <p>{{ r_post.pub_date }}</p>
+    </div>
+</div>
+{% endfor %}
