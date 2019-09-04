@@ -3,8 +3,7 @@
   {% for category in category %}
     <li>
         <a href="#" class="d-flex">
-            <p>{{ category.name }}</p>
-            <p>(37)</p>
+            <p>{{ category.name }} ({{ category.post_set.count }})</p>
         </a>
     </li>
   {% endfor %}
