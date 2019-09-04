@@ -1,5 +1,6 @@
-from blog.models import Category
+from blog.models import Category, Post
 
 def category_list(request):
     category = Category.objects.filter(is_draft=False)
-    return {'category': category}
+    recent_post = Post.objects.filter(is_draft=False).order_by('-pub_date')[:4]
+    return {'category': category, 'r_post': recent_post}
