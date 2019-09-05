@@ -35,10 +35,9 @@
 			<div class="filters portfolio-filter">
 				<ul>
 					<li class="active" data-filter="*">all</li>
-					<li data-filter=".popular">popular</li>
-					<li data-filter=".latest"> latest</li>
-					<li data-filter=".following">following</li>
-					<li data-filter=".upcoming">upcoming</li>
+          {% for ctg in category %}
+					<li data-filter=".{{ ctg.name }}">{{ ctg.name }}</li>
+          {% endfor %}
 				</ul>
 			</div>
 
