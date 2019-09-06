@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from portfolio.models import Portfolio
 
 def home_page(request):
     return render(request, 'home.html')

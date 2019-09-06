@@ -3,11 +3,7 @@ from .models import Category, Portfolio
 
 
 def portfolio_page(request):
-    portfolio = Portfolio.objects.filter(is_draft=False)
-    context = {
-        'portfolio': portfolio
-    }
-    return render(request, 'portfolio/portfolio.html', context)
+    return render(request, 'portfolio/portfolio.html')
 
 def portfolio_details(request, portfolio_id):
     item = Portfolio.objects.get(id=portfolio_id)
