@@ -58,7 +58,8 @@ class Post(models.Model):
     tag = models.ManyToManyField(Tag)
     author = models.ForeignKey(AuthorProfile, on_delete=models.SET_NULL, null=True)
     is_draft = models.BooleanField(default=False)
-    pub_date = models.DateTimeField(auto_now_add=True)
+    pub_date = models.DateField(auto_now_add=True)
+    date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.title
