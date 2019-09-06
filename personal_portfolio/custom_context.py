@@ -1,5 +1,5 @@
 from blog.models import Category, Post, Tag
-from portfolio.models import Category
+from portfolio.models import Category, Portfolio
 
 def blog_context(request):
     category = Category.objects.filter(is_draft=False)
@@ -9,4 +9,5 @@ def blog_context(request):
 
 def portfolio_context(request):
     category = Category.objects.filter(is_draft=False)
-    return {'category': category}
+    portfolio = Portfolio.objects.filter(is_draft=False)
+    return {'category': category, 'portfolio': portfolio}
