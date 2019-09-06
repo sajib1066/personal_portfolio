@@ -296,72 +296,28 @@
         </div>
 
         <div class="row">
+          {% for post in post %}
           <div class="col-lg-4 col-md-6">
             <div class="single-blog">
               <div class="thumb">
-                <img class="img-fluid" src="{% static 'img/b1.jpg' %}" alt="">
+                <img src="{{ post.photo.url }}" alt="post" height="310px" width="360px">
               </div>
               <div class="short_details">
                 <div class="meta-top d-flex">
-                  <a href="#"><i class="ti-user"></i> Admin post</a>
-                  <a href="#"><i class="ti-calendar"></i> Feb 14, 2019</a>
+                  <a href="#"><i class="ti-user"></i>{{ post.author }}</a>
+                  <a href="#"><i class="ti-calendar"></i>{{ post.pub_date }}</a>
                 </div>
                 <a class="d-block" href="single-blog.html">
-                  <h4>Shall every fourth lesser have...</h4>
+                  <h4>{{ post.title }}</h4>
                 </a>
                 <div class="text-wrap">
-                  <p>
-                    Have whose a two night earth she set you creeping replenish place whales move Forth first him seed green.
-                  </p>
+                  <p>{{ post.content|safe|truncatewords:30 }}</p>
                 </div>
                 <a href="#" class="primary_btn2">Learn More</a>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="single-blog">
-              <div class="thumb">
-                <img class="img-fluid" src="{% static 'img/b2.jpg' %}" alt="">
-              </div>
-              <div class="short_details">
-                <div class="meta-top d-flex">
-                  <a href="#"><i class="ti-user"></i> Admin post</a>
-                  <a href="#"><i class="ti-calendar"></i> Feb 14, 2019</a>
-                </div>
-                <a class="d-block" href="single-blog.html">
-                  <h4>Shall every fourth lesser have...</h4>
-                </a>
-                <div class="text-wrap">
-                  <p>
-                    Have whose a two night earth she set you creeping replenish place whales move Forth first him seed green.
-                  </p>
-                </div>
-                <a href="#" class="primary_btn2">Learn More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="single-blog">
-              <div class="thumb">
-                <img class="img-fluid" src="{% static 'img/b3.jpg' %}" alt="">
-              </div>
-              <div class="short_details">
-                <div class="meta-top d-flex">
-                  <a href="#"><i class="ti-user"></i> Admin post</a>
-                  <a href="#"><i class="ti-calendar"></i> Feb 14, 2019</a>
-                </div>
-                <a class="d-block" href="single-blog.html">
-                  <h4>Shall every fourth lesser have...</h4>
-                </a>
-                <div class="text-wrap">
-                  <p>
-                    Have whose a two night earth she set you creeping replenish place whales move Forth first him seed green.
-                  </p>
-                </div>
-                <a href="#" class="primary_btn2">Learn More</a>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </section>

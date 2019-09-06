@@ -1,8 +1,10 @@
 from django.shortcuts import render
-from portfolio.models import Portfolio
+from blog.models import Post
 
 def home_page(request):
-    return render(request, 'home.html')
+    post = Post.objects.filter(is_draft=False).order_by('-pub_date')[:3]
+    context = {'post': post}
+    return render(request, 'home.html', context)
 
 def about_page(request):
     return render(request, 'about.html')
