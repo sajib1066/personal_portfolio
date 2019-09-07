@@ -7,7 +7,7 @@ def blog_page(request):
     context = {
         'posts': posts
     }
-    return render(request, 'blog/blog.html', context)
+    return render(request, 'blog/post.html', context)
 
 def blog_details(request, post_id):
     post = Post.objects.get(id=post_id)
@@ -15,3 +15,11 @@ def blog_details(request, post_id):
         'post': post
     }
     return render(request, 'blog/single-blog.html', context)
+
+def search_post(request):
+    if request.method == 'POST':
+        keyword = request.POST['keyword']
+        post = Post.objects.filter(title__contains=keyword)
+        context = {'post': post}
+        return render(request, 'blog/search.html', context)
+    return render(request, 'blog/search.html')
