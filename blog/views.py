@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import AuthorProfile, Category, Tag, Post
+from .models import AuthorProfile, PostCategory, Tag, Post
 
 
 def blog_page(request):

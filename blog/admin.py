@@ -24,6 +24,6 @@ class PostAdmin(admin.ModelAdmin):
 # Register your models here.
 
 admin.site.register(models.AuthorProfile, AuthorProfileAdmin)
-admin.site.register(models.Category, CategoryAdmin)
+admin.site.register(models.PostCategory, CategoryAdmin)
 admin.site.register(models.Tag, TagAdmin)
 admin.site.register(models.Post, PostAdmin)
