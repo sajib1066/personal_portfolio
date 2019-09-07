@@ -7,8 +7,8 @@
       <div class="blog_item_img">
         <img class="card-img rounded-0" src="{{ post.photo.url }}" alt="">
         <a href="#" class="blog_item_date">
-          <h3>15</h3>
-          <p>Jan</p>
+          <h3>{{ post.pub_date|date:'b'|title }}</h3>
+          <p>{{ post.pub_date|date:'d' }}</p>
         </a>
       </div>
 
