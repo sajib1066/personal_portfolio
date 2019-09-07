@@ -307,7 +307,7 @@
                   <a href="#"><i class="ti-user"></i>{{ post.author }}</a>
                   <a href="#"><i class="ti-calendar"></i>{{ post.pub_date }}</a>
                 </div>
-                <a class="d-block" href="single-blog.html">
+                <a class="d-block" href="{% url 'blog-details' post.id %}">
                   <h4>{{ post.title }}</h4>
                 </a>
                 <div class="text-wrap">
