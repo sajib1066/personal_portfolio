@@ -251,7 +251,7 @@
         <div class="filters portfolio-filter">
           <ul>
             <li class="active" data-filter="*">all</li>
-            {% for ctg in category %}
+            {% for ctg in portfolio_category %}
   					<li data-filter=".{{ ctg.name }}">{{ ctg.name }}</li>
             {% endfor %}
           </ul>
