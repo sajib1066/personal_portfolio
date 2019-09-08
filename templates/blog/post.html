@@ -5,7 +5,7 @@
   {% for post in posts %}
     <article class="blog_item">
       <div class="blog_item_img">
-        <img class="card-img rounded-0" src="{{ post.photo.url }}" alt="">
+        <img class="card-img rounded-0" src="{{ post.photo.url }}" alt="" height="450px">
         <a href="#" class="blog_item_date">
           <h3>{{ post.pub_date|date:'b'|title }}</h3>
           <p>{{ post.pub_date|date:'d' }}</p>
@@ -16,7 +16,7 @@
           <a class="d-inline-block" href="{% url 'blog-details' post.id %}">
               <h2>{{ post.title }}</h2>
           </a>
-          <p>{{ post.content|safe }}</p>
+          <p>{{ post.content|safe|truncatewords:100 }}</p>
           <ul class="blog-info-link">
             <li><a href="#"><i class="far fa-user"></i>{{ post.author }}</a></li>
             <li><a href="#"><i class="far fa-comments"></i> 03 Comments</a></li>
