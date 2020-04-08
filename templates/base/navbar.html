@@ -39,7 +39,7 @@
                aria-expanded="false">Category</a>
               <ul class="dropdown-menu">
                 {% for ctg in post_category %}
-                <li class="nav-item"><a class="nav-link" href="{% url 'blog' %}">{{ ctg.name }}</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'category-post' ctg.id %}">{{ ctg.name }}</a></li>
                 {% endfor %}
               </ul>
             </li>

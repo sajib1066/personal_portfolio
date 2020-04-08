@@ -1,0 +1,32 @@
+{% extends 'blog/blog.html' %}
+{% block blog %}
+<div class="blog_left_sidebar">
+  {% if post %}
+  {% for post in post %}
+    <article class="blog_item">
+      <div class="blog_item_img">
+        <img class="card-img rounded-0" src="{{ post.photo.url }}" alt="">
+        <a href="#" class="blog_item_date">
+          <h3>15</h3>
+          <p>Jan</p>
+        </a>
+      </div>
+
+      <div class="blog_details">
+          <a class="d-inline-block" href="{% url 'blog-details' post.id %}">
+              <h2>{{ post.title }}</h2>
+          </a>
+          <p>{{ post.content|safe }}</p>
+          <ul class="blog-info-link">
+            <li><a href="#"><i class="far fa-user"></i>{{ post.category }}</a></li>
+            <li><a href="#"><i class="far fa-comments"></i> 03 Comments</a></li>
+          </ul>
+      </div>
+    </article>
+
+  {% endfor %}
+  {% else %}
+    <h2 class="text-danger">No Post Available.</h2>
+  {% endif %}
+</div>
+{% endblock %}

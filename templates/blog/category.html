@@ -2,7 +2,7 @@
 <ul class="list cat-list">
   {% for category in post_category %}
     <li>
-        <a href="#" class="d-flex">
+        <a href="{% url 'category-post' category.id %}" class="d-flex">
             <p>{{ category.name }} ({{ category.post_set.count }})</p>
         </a>
     </li>

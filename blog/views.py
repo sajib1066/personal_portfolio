@@ -23,3 +23,12 @@ def search_post(request):
         context = {'post': post}
         return render(request, 'blog/search.html', context)
     return render(request, 'blog/search.html')
+
+def blog_category_page(request, id):
+    # ctg_id = PostCategory.objects.get(id=id)
+    # print(ctg_id)
+    post = Post.objects.filter(id=id)
+    context = {
+        'post': post
+    }
+    return render(request, 'blog/category-post.html', context)
