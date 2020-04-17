@@ -1,4 +1,4 @@
-# Project Nam: Personal Portfolio Website
+# Project Name: Personal Portfolio Website
 
 ## How To Setup
 1. Clone This Project `git clone https://github.com/sajib1066/personal_portfolio.git`
